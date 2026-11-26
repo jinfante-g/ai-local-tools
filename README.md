@@ -1,59 +1,39 @@
-# AiLocalTools
+# AI Local Tools
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.3.0.
+A local-first, browser-based toolkit for developers and QA. Bug Briefs is the first planned tool in a modular Angular application.
 
-## Development server
+**Package status:** Project documentation and planning; the existing Angular CLI scaffold is still a placeholder, with no product features. See [project status](docs/STATUS.md).
 
-To start a local development server, run:
+## Start here
 
-```bash
-ng serve
-```
+1. Read [project context](docs/PROJECT.md) and the [documentation index](docs/INDEX.md).
+2. Read [AGENTS.md](AGENTS.md) before using an AI agent in this repository.
+3. Review the [roadmap](docs/ROADMAP.md) and [development workflow](docs/workflows/DEVELOPMENT.md).
+4. Resolve the open checks in [project status](docs/STATUS.md) and obtain phase approval before implementation.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Product direction
 
-## Code scaffolding
+AI Local Tools is intended to host multiple productivity tools behind shared navigation and shared capabilities. Bug Briefs is the first planned tool for capturing and preparing software issue reports.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+The app is planned as frontend-only. Product inference must run locally in the browser; sending user content to hosted inference services is out of scope.
 
-```bash
-ng generate component component-name
-```
+## Confirmed technical direction
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Angular, targeting the latest stable release available when implementation begins
+- npm; GitHub; feature branches and pull requests to main
+- Tailwind CSS and Angular CDK; light and dark themes
+- Desktop Chrome and Edge as initial browser targets
+- LocalStorage for preferences; IndexedDB through Dexie.js for application data
+- runonweb.ai as the initial local-inference candidate, behind adapters
+- Unit tests from the start; E2E coverage added progressively
+- English for code and project documentation; Spanish for Slack progress updates
 
-```bash
-ng generate --help
-```
+These decisions are not proof that dependencies or models have been validated. Corporate requirements, runtime compatibility, and model licenses remain open. See [status](docs/STATUS.md).
 
-## Building
+## Planned feature area
 
-To build the project run:
+The selected Bug Briefs feature set is listed in [its requirements](docs/features/bug-briefs/REQUIREMENTS.md). Selection does not mean implementation or a confirmed delivery order.
 
-```bash
-ng build
-```
+## Scope of this package
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This archive prepares project context, rules, the eight-phase roadmap, detailed plans and gates for phases 01 and 02, workflow diagrams, and reusable evidence, audit, Slack, and agent prompt templates. It does not create the repository, initialize Angular, or implement product features.
